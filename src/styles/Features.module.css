@@ -1,0 +1,9 @@
+.FeaturesParent{
+    width: 1440px;
+    background-color: white;
+    height: 500px;
+    width: 100%;
+}
+.FeaturesChild{
+    display: flex;
+}
