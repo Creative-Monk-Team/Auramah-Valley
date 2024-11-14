@@ -1,3 +1,4 @@
+import About from "../components/About";
 import Banner from "../components/Banner";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
@@ -8,6 +9,7 @@ let Home = () => {
     <div className={styles.home}>
       <Navbar />
       <Banner/>
+      <About/>
       <Footer />
     </div>
   );

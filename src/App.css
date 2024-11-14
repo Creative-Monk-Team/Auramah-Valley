@@ -3,10 +3,6 @@ body {
   overflow-x: hidden;
 } 
 
-body{
-  background-color: rgba(0, 0, 0, 0.831);
-}
-
 * {
   margin: 0;
   padding: 0;
