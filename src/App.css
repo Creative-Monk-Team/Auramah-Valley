@@ -36,3 +36,28 @@ h2 {
 p {
   font-size: 15px;
 }
+
+@font-face {
+  font-family: 'Ardent-Sans';
+  src: url('/src//assets/fonts/Ardent-Sans\ book.otf') format('otf'),
+       url('/src//assets/fonts/Ardent-Sans\ book.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nordhead';
+  src: url('/src//assets//fonts//Nordhead\ Typeface.otf') format('otf'),
+       url('/src//assets//fonts//Nordhead\ Typeface.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1, h2, h3 {
+  font-family: 'Ardent-Sans', sans-serif;
+}
+
+/* Apply the second font (Open Sans) to headings */
+p {
+  font-family: 'Nordhead', sans-serif;
+}
