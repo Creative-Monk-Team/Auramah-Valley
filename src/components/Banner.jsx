@@ -141,6 +141,8 @@ let Banner = () => {
               <span>Lorem</span> Lorem ipsum, dolor sit amet consectetur
               adipisicing elit.
             </h1>
+            <div className={styles.outlinedText}>BOOST</div>
+
             <p>
               Et beatae quo esse veniam iste aperiam facere tempora officia
               animi ab molestiae repudiandae libero quae, error reprehenderit
