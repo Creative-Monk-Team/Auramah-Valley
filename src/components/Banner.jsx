@@ -1,12 +1,12 @@
 import { useState, useEffect, useRef, useContext } from "react";
-// import { ToastContainer, toast, Bounce } from 'react-toastify';
-// import { AuthContext } from '../context/AuthContentProvider';
-// import BlueButton from './BlueButton';
+import { ToastContainer, toast, Bounce } from 'react-toastify';
+import { AuthContext } from '../context/AuthContextProvider';
 import banner from "../assets/banner2.jpg";
 import banner3 from "../assets/banner5.jpg";
 import banner5 from "../assets/banner6.jpg";
 import banner6 from "../assets/banner7.jpg";
 import styles from "../styles/Banner.module.css";
+import Button from "./Button";
 
 let Banner = () => {
   let images = [banner, banner5, banner6, banner3];
@@ -19,21 +19,21 @@ let Banner = () => {
     return () => clearInterval(intervalId);
   }, []);
 
-  //   let [showForm, setShowForm, showWaitingLoading, setShowWaitingLoading] =
-  //     useContext(AuthContext);
-  //   const notifySuccess = () => {
-  //     toast.success('Form Submitted Successfully', {
-  //       position: 'top-center',
-  //       autoClose: 3000,
-  //       hideProgressBar: false,
-  //       closeOnClick: true,
-  //       pauseOnHover: true,
-  //       draggable: true,
-  //       progress: undefined,
-  //       theme: 'colored',
-  //       transition: Bounce,
-  //     });
-  //   };
+    let [showForm, setShowForm, showWaitingLoading, setShowWaitingLoading] =
+      useContext(AuthContext);
+    const notifySuccess = () => {
+      toast.success('Form Submitted Successfully', {
+        position: 'top-center',
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'colored',
+        transition: Bounce,
+      });
+    };
 
   const notifyError = () => {
     toast.error("Please try again later.", {
@@ -141,14 +141,14 @@ let Banner = () => {
               <span>Lorem</span> Lorem ipsum, dolor sit amet consectetur
               adipisicing elit.
             </h1>
-            <div className={styles.outlinedText}>BOOST</div>
+            {/* <div className={styles.outlinedText}>BOOST</div> */}
 
             <p>
               Et beatae quo esse veniam iste aperiam facere tempora officia
               animi ab molestiae repudiandae libero quae, error reprehenderit
               alias ea atque perferendis!
             </p>
-            {/* <BlueButton text={'Enquire Now'} /> */}
+            <Button text={'Enquire Now'}/>
           </div>
           <div
             className={`${styles.bannerFormSection} ${
@@ -184,7 +184,7 @@ let Banner = () => {
           </div>
         </div>
       </div>
-      {/* <ToastContainer /> */}
+      <ToastContainer />
     </>
   );
 };
