@@ -148,7 +148,9 @@ let Banner = () => {
               animi ab molestiae repudiandae libero quae, error reprehenderit
               alias ea atque perferendis!
             </p>
+            <span className={styles.encquireNowButton}>
             <Button text={'Enquire Now'}/>
+            </span>
           </div>
           <div
             className={`${styles.bannerFormSection} ${
