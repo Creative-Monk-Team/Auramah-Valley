@@ -1,5 +1,7 @@
 import styles from "../styles/Features.module.css";
 import Button from "./Button";
+import featImg1 from "../assets/featImg1.jpg";
+import featImg2 from "../assets/featImg2.jpg";
 
 const Features = () => {
   return (
@@ -7,6 +9,10 @@ const Features = () => {
       <div className={styles.FeaturesParent}>
         <div className={styles.FeaturesChild}>
           <div className={styles.FeaturesContent}>
+          <div className={styles.yellowLineFlex}>
+            <h5>Featured Project</h5>
+            <div></div>
+          </div>
             <h1>Lorem ipsum dolor sit amet.</h1>
             <p className={styles.FeaturesContentPara}>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -39,12 +45,12 @@ const Features = () => {
           <div className={styles.FeaturesImage}>
             <img
               className={styles.img1}
-              src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BB1msIHz.img"
+              src={featImg1}
               alt=""
             />
             <img
               className={styles.img2}
-              src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BB1msIHz.img"
+              src={featImg2}
               alt=""
             />
           </div>

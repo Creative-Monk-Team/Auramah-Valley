@@ -1,5 +1,143 @@
-.WhyChooseUsChild{
+/* .WhyChooseUsChild{
     width: 1440px;
     display: flex;
-    
+    margin: auto;
+
 }
+ */
+ .WhyChooseUsParent{ 
+    width: 100%;
+    padding: 80px 0px;
+}
+
+.WhyChooseUsContent{
+    width: 48%;
+    margin: auto;
+}
+.FeaturesContent h1{
+    margin:20px 0px;
+}
+
+.WhyChooseUsImage{
+    width: 48%;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.WhyChooseUsChild{
+    width: 1440px;
+    margin: auto;
+    display: flex;
+    align-items: stretch;
+
+}
+.WhyChooseUsListParent{
+    display: flex;
+    margin-top: 25px;
+    align-items: center;
+}
+
+.WhyChooseUsListInnerChild {
+    margin-left: 20px;
+}
+
+ 
+.learnMore {
+    display: inline-flex;
+    align-items: center;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    background-color: transparent;
+    border: 2px solid #d3d3d3;
+    border-radius: 15px;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    margin-top: 30px;
+  }
+  
+  
+  .arrow {
+    font-size: 16px;
+    margin-left: 5px;
+    transition: transform 0.4s ease;
+    rotate: -45deg;
+  }
+  
+  /* Hover effect */
+  .learnMore:hover {
+    border-color: rgba(0, 0, 0, 0.507);
+    background-color: #f2f2f2;
+  }
+  
+  .learnMore:hover .arrow {
+    transform: translateX(5px);
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .learnMore {
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+
+.checkmarkButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    background-color: #000; 
+    color: #fff; 
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50%;  
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Hover effect */
+  .checkmarkButton:hover {
+    background-color: #333;  
+    transform: scale(1.1);  
+  }
+  
+.WhyChooseUsContentPara{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+.img1{
+    border-radius: 20px;
+    width: 630px;
+}
+.img2{
+    border-radius: 20px;
+    width: 400px;
+}
+.encquireNowButton button{
+    margin-top: 30px;
+}
+
+
+.yellowLineFlex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  
+  .yellowLineFlex div {
+    width: 50px;
+    height: 2px;
+    background-color: var(--primary-color-golden);
+  }
+  
+  .yellowLineFlex h5{
+    color: var(--primary-color-golden);
+  }

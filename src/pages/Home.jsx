@@ -7,6 +7,7 @@ import { Helmet } from "react-helmet-async";
 import { ToastContainer, toast, Bounce } from "react-toastify";
 import Features from "../components/Features";
 import logo from "../assets/logo.png";
+import WhyChooseUs from "../components/WhyChooseUs";
 
 let Home = () => {
   return (
@@ -32,6 +33,7 @@ let Home = () => {
         <Banner />
         <About />
         <Features/>
+        <WhyChooseUs/>
         <Footer />
       </div>
     </>
