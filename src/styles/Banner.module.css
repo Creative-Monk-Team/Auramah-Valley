@@ -390,7 +390,19 @@
     color: #fecd29;
     font-size: 30px;
   }
+
+
 }
+
+.outlinedText {
+    font-size: 100px; /* Adjust font size as needed */
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke: 2px white; /* Outline color */
+    position: relative;
+  }
+
+
 
 .outlinedText {
   font-size: 100px; /* Adjust font size as needed */
