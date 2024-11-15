@@ -1,5 +1,5 @@
 import styles from "../styles/Features.module.css";
-import checkMark from "../assets/check.svg";
+import Button from "./Button";
 
 const Features = () => {
   return (
@@ -7,42 +7,46 @@ const Features = () => {
       <div className={styles.FeaturesParent}>
         <div className={styles.FeaturesChild}>
           <div className={styles.FeaturesContent}>
-            <h1>Lets Find Out Right Selling Options For You </h1>
+            <h1>Lorem ipsum dolor sit amet.</h1>
             <p className={styles.FeaturesContentPara}>
-              As the complexity of building to increase, the field or
-              architecture
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Dignissimos cupiditate suscipit eius aut eveniet. Doloremque, eum
+              tempore! Excepturi nostrum aperiam commodi nulla nihil, animi ad
+              impedit accusantium in? Vel, cum.
             </p>
             <div className={styles.FeaturesListParent}>
               <div>
-              <button className={styles.checkmarkButton}>✓</button>
+                <button className={styles.checkmarkButton}>✓</button>
               </div>{" "}
-              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Lorem ipsum dolor amet.</p>
             </div>
             <div className={styles.FeaturesListParent}>
               <div>
-              <button className={styles.checkmarkButton}>✓</button>
+                <button className={styles.checkmarkButton}>✓</button>
               </div>{" "}
-              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Lorem ipsum dolor amet.</p>
             </div>
             <div className={styles.FeaturesListParent}>
               <div>
-              <button className={styles.checkmarkButton}>✓</button>
+                <button className={styles.checkmarkButton}>✓</button>
               </div>{" "}
-              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Lorem ipsum dolor amet.</p>
             </div>
-            <button className={styles.learnMore}>
-              Learn More <span className={styles.arrow}>→</span>
-            </button>
+            <span className={styles.encquireNowButton}>
+              <Button text={"Learn More"} />
+            </span>
           </div>
           <div className={styles.FeaturesImage}>
-             <img className={styles.img1}
+            <img
+              className={styles.img1}
               src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BB1msIHz.img"
               alt=""
-             />
-             <img className={styles.img2}
+            />
+            <img
+              className={styles.img2}
               src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BB1msIHz.img"
               alt=""
-             />
+            />
           </div>
         </div>
       </div>

@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import styles from "../styles/Home.module.css";
 import { Helmet } from "react-helmet-async";
 import { ToastContainer, toast, Bounce } from "react-toastify";
+import Features from "../components/Features";
 import logo from "../assets/logo.png";
 
 let Home = () => {
@@ -30,6 +31,7 @@ let Home = () => {
         <Navbar />
         <Banner />
         <About />
+        <Features/>
         <Footer />
       </div>
     </>
