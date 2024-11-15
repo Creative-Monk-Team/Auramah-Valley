@@ -1,10 +1,6 @@
 html,
 body {
   overflow-x: hidden;
-} 
-
-body{
-  background-color: rgba(0, 0, 0, 0.831);
 }
 
 * {
@@ -16,22 +12,22 @@ body{
   transition: 0.3s all ease-in-out;
 }
 
-#auramah_valley img{
+#auramah_valley img {
   background-size: cover;
   object-fit: cover;
 }
 
 :root {
-  --primary-color-black: #24262D;
-  --primary-color-golden: #DE9E53; 
+  --primary-color-black: #24262d;
+  --primary-color-golden: #de9e53;
   --primary-color-white: #ffffff;
-  --secondary-color-beige: #F7F5F1;
+  --secondary-color-beige: #f7f5f1;
 }
 
 h1 {
   font-size: 40px;
 }
-h2 { 
+h2 {
   font-size: 25px;
 }
 p {
@@ -39,26 +35,33 @@ p {
 }
 
 @font-face {
-  font-family: 'Ardent-Sans';
-  src: url('/src//assets/fonts/Ardent-Sans\ book.otf') format('otf'),
-       url('/src//assets/fonts/Ardent-Sans\ book.otf') format('otf');
+  font-family: "Canela";
+  src: url("./assets/fonts/canelaweb-bold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Nordhead';
-  src: url('/src//assets//fonts//Nordhead\ Typeface.otf') format('otf'),
-       url('/src//assets//fonts//Nordhead\ Typeface.otf') format('otf');
+  font-family: "GtSectra";
+  src: url("./assets/fonts/AloeveraDisplay-Light.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
-h1, h2, h3 {
-  font-family: 'Ardent-Sans', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Canela", sans-serif;
 }
 
-/* Apply the second font (Open Sans) to headings */
-p {
-  font-family: 'Nordhead', sans-serif;
+p,
+a,
+button,
+textarea,
+input,
+span {
+  font-family: "GtSectra", sans-serif;
 }

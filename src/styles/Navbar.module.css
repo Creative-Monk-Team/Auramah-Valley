@@ -18,7 +18,7 @@
 }
 
 .logo {
-  width: 250px;
+  width: 300px;
   height: auto;
 }
 
@@ -27,6 +27,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: -10px;
 }
 
 .optionsDiv a {
