@@ -1,11 +1,23 @@
+import React, { useEffect } from 'react';
 import styles from "../styles/Thankyou.module.css";
 
-let Thankyou = () => {
-    return (
-        <div className={styles.thankyou}>
-            <h1>This is thankyou page.</h1>
-        </div>
-    )
-}
+const ThankYou  = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);  
+      }, []);
 
-export default Thankyou;
+  return (
+    <div className={styles.page}>
+      <div className={styles.container}>
+        <div className={styles.card}>
+          <h1 className={styles.thankYouText}>Thank You!</h1>
+          <p className={styles.description}>Your submission has been received. We’ll be in touch soon.</p>
+ 
+          <p className={styles.thankYouNote}>We’re excited to help you on your real estate journey!</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ThankYou ;

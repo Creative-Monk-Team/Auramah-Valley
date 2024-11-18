@@ -15,7 +15,7 @@
 
 .popupFormParent .form {
   width: 500px;
-  background-color: #394c9b;
+  background-color: var( --primary-color-golden);
   border-radius: 10px;
   padding: 30px 20px;
   text-align: center;
@@ -167,14 +167,14 @@
   cursor: pointer;
   padding: 10px 50px;
   font-size: 16px;
-  color: #384490;
+  color: var( --primary-color-golden);
   font-weight: 600;
 }
 
 .form button:hover {
   animation: bounceAnimation 0.6s ease;
-  color: white;
-  background-color: #384490;
+  color: var( --primary-color-golden);
+  background-color: var(--primary-color-black);
   border-color: white;
 }
 

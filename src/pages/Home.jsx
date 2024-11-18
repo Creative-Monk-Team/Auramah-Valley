@@ -8,6 +8,9 @@ import { ToastContainer, toast, Bounce } from "react-toastify";
 import Features from "../components/Features";
 import logo from "../assets/logo.png";
 import WhyChooseUs from "../components/WhyChooseUs";
+import Explore from "../components/Explore";
+import ContactForm from "../components/ContactForm";
+import FeatureProperty from "../components/FeatureProperty";
 
 let Home = () => {
   return (
@@ -32,8 +35,11 @@ let Home = () => {
         <Navbar />
         <Banner />
         <About />
+        <FeatureProperty/>
         <Features/>
         <WhyChooseUs/>
+        <Explore />
+        <ContactForm />
         <Footer />
       </div>
     </>

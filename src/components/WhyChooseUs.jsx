@@ -2,7 +2,8 @@ import styles from "../styles/WhyChooseUs.module.css";
 import WhyImage from "../assets/whychooseus.png";
 import whyImg1 from "../assets/whyImg1.png";
 import whyImg2 from "../assets/whyImg2.png";
-import whyImg3 from "../assets/whyImg3.png";
+import whyImg3 from "../assets/whyImg3.png"
+import Button from "./Button";
 
 const WhyChooseUs = () => {
   return (
@@ -22,7 +23,7 @@ const WhyChooseUs = () => {
               impedit accusantium
             </p>
             <div className={styles.WhyChooseUsListParent}>
-              <div>
+              <div className={styles.WhyChooseUsListImgPar}>
                 <img src={whyImg1} alt="" />
               </div>{" "}
               <div className={styles.WhyChooseUsListInnerChild}>
@@ -31,7 +32,7 @@ const WhyChooseUs = () => {
               </div>
             </div>
             <div className={styles.WhyChooseUsListParent}>
-              <div>
+              <div  className={styles.WhyChooseUsListImgPar}>
               <img src={whyImg2} alt="" />
               </div>{" "}
               <div className={styles.WhyChooseUsListInnerChild}>
@@ -40,7 +41,7 @@ const WhyChooseUs = () => {
               </div>
             </div>
             <div className={styles.WhyChooseUsListParent}>
-              <div>
+              <div  className={styles.WhyChooseUsListImgPar}>
               <img src={whyImg3} alt="" />
               </div>{" "}
               <div className={styles.WhyChooseUsListInnerChild}>
@@ -49,7 +50,12 @@ const WhyChooseUs = () => {
               </div>
              
             </div>
+            <span className={styles.ButtonSpan}>
+            <Button text={"Learn More"} />
+            </span>
+           
           </div>
+          
           <div className={styles.WhyChooseUsImage}>
             <img
               className={styles.img1}
