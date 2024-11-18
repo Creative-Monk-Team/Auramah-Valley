@@ -64,6 +64,9 @@ let PopupForm = () => {
       if (response.ok) {
         notifySuccess();
         setShowWaitingLoading(false);
+        setTimeout(() => {
+          window.location.href="/thankyou"
+        }, 5000);
       } else {
         setShowWaitingLoading(false);
         notifyError();
