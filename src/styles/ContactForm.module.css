@@ -1,38 +1,38 @@
- .WhyChooseUsParent{ 
+.ContactFormParent{ 
     width: 100%;
     padding: 80px 0px;
     background-color: var(--secondary-color-beige);
 }
 
-.WhyChooseUsContent{
+.ContactFormContent{
     width: 48%;
     margin: auto;
 }
-.WhyChooseUsContent h1{
+.ContactFormContent h1{
     margin:20px 0px;
 }
 
-.WhyChooseUsImage{
+.ContactFormImage{
     width: 48%;
     align-items: flex-end;
     justify-content: flex-end;
     gap: 10px;
 }
 
-.WhyChooseUsChild{
+.ContactFormChild{
     width: 1440px;
     margin: auto;
     display: flex;
     align-items: stretch;
 
 }
-.WhyChooseUsListParent{
+.ContactFormListParent{
     display: flex;
     margin-top: 25px;
     align-items: center;
 }
 
-.WhyChooseUsListInnerChild {
+.ContactFormListInnerChild {
     margin-left: 20px;
 }
 
@@ -101,8 +101,8 @@
     transform: scale(1.1);  
   }
   
-.WhyChooseUsContentPara{
-    margin-top: 10px;
+.ContactFormContentPara{
+    /* margin-top: 10px; */
     margin-bottom: 20px;
     font-size: 16px;
 }
@@ -117,7 +117,7 @@
 .encquireNowButton button{
     margin-top: 30px;
 }
-.WhyChooseUsListImgPar img{
+.ContactFormListImgPar img{
   height: 45px;
   width: 45px;
 }
@@ -140,7 +140,95 @@
     color: var(--primary-color-golden);
   }
 
-  .ButtonSpan button{
-    margin-top: 30px;
-    margin-left: 20px;
+  /* Form Group */
+.formGroup {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
   }
+  
+  /* Labels */
+  .formGroup label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+  }
+  
+  /* Input Fields */
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  select {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  select:focus {
+    border-color: var( --secondary-color-beige); /* Matches the submit button color */
+  }
+  
+  /* Dropdown (Select) */
+  select {
+    appearance: none; /* Remove default dropdown arrow */
+    background-color: #fff;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%23ccc' d='M5 6L0 0h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+    cursor: pointer;
+  }
+  
+
+
+  
+  input::placeholder {
+    color: #aaa;
+    font-style: italic;
+  }
+ 
+.rowFlex {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; 
+    margin-bottom: 20px; 
+  }
+  
+ 
+  .rowFlex .formGroup {
+    flex: 1; 
+  }
+  
+
+  @media (max-width: 768px) {
+    .rowFlex {
+      flex-direction: column; 
+    }
+  }
+
+.submitButton {
+    width: 100%;
+    background-color: var(--primary-color-golden);
+    color: #fff;
+    font-size: 16px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submitButton:hover {
+    background-color: var(--primary-color-black);
+    color: var(--primary-color-golden);
+  }
+  
