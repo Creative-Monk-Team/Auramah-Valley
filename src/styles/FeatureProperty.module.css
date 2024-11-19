@@ -97,3 +97,46 @@
   .FeaturePropertyContent p{
     margin: 25px 0px;
   }
+
+
+  @media all and (max-width: 1400px) {
+    .innerFeatureProperty {
+      width: 1240px;
+    }
+ 
+  }
+  
+  @media all and (max-width: 1300px) {
+    .innerFeatureProperty {
+      width: 1190px;
+    }
+  }
+  
+  @media all and (max-width: 1240px) {
+    .innerFeatureProperty {
+      width: 1000px;
+    }
+  }
+  
+  @media all and (max-width: 1050px) {
+    .innerFeatureProperty {
+      width: 1000px;
+      flex-direction: column-reverse;
+      row-gap: 100px;
+    }
+    .imageSection {
+      width: 90%;
+      position: relative;
+    }
+    
+    .FeaturePropertyContent {
+      width: 90%;
+      text-align: center;
+    }
+    .yellowLineFlex{
+      justify-content: center;
+    }
+    .yellowLineFlex div{
+      display: none;
+    }
+  }

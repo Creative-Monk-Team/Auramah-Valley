@@ -96,3 +96,48 @@
 .aboutContent p{
   margin: 25px 0px;
 }
+
+
+
+@media all and (max-width: 1400px) {
+  .innerAbout {
+    width: 1240px;
+  }
+}
+
+@media all and (max-width: 1300px) {
+  .innerAbout {
+    width: 1190px;
+  }
+}
+
+@media all and (max-width: 1240px) {
+  .innerAbout {
+    width: 1000px;
+  }
+}
+
+@media all and (max-width: 1050px) {
+  .innerAbout {
+    width: 1000px;
+    flex-direction: column;
+    row-gap: 100px;
+  }
+  .imageSection {
+    width: 90%;
+    position: relative;
+  }
+  
+  .aboutContent {
+    width: 90%;
+    text-align: center;
+  }
+  .yellowLineFlex{
+    justify-content: center;
+  }
+  .yellowLineFlex div{
+    display: none;
+  }
+}
+
+ 
