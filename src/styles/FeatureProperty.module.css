@@ -120,17 +120,17 @@
   
   @media all and (max-width: 1050px) {
     .innerFeatureProperty {
-      width: 1000px;
+      width: 900px;
       flex-direction: column-reverse;
       row-gap: 100px;
     }
     .imageSection {
-      width: 90%;
+      width: 100%;
       position: relative;
     }
     
     .FeaturePropertyContent {
-      width: 90%;
+      width: 100%;
       text-align: center;
     }
     .yellowLineFlex{
@@ -140,3 +140,44 @@
       display: none;
     }
   }
+
+@media all and (max-width: 950px){
+  .innerFeatureProperty {
+    width: 95%;
+  }
+
+  .smallImage {
+    right: -10px;
+    
+  }
+}
+
+@media all and (max-width: 550px) {
+  .bigImage {
+    height: 400px;
+  }
+
+  .smallImage {
+    height: 300px;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .bigImage {
+    height: 300px;
+  }
+
+  .smallImage {
+    height: 200px;
+  }
+}
+
+@media all and (max-width: 380px) {
+  .bigImage {
+    height: 270px;
+  }
+
+  .smallImage {
+    height: 170px;
+  }
+}
