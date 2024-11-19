@@ -141,7 +141,7 @@ let Banner = () => {
             } ${isFirstView ? styles.showAnimationSection : ""}`}
           >
             <h1>
-              <span>Lorem</span> Lorem ipsum, dolor sit amet consectetur
+                Lorem ipsum, dolor sit amet consectetur
               adipisicing elit.
             </h1>
             {/* <div className={styles.outlinedText}>BOOST</div> */}
