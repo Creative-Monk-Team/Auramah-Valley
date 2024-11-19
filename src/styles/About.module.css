@@ -26,7 +26,7 @@
 .bigImage {
   width: 60%;
   border-radius: 10px;
-  height: 600px; 
+  height: 600px;
   position: relative;
   z-index: 2;
 }
@@ -85,19 +85,17 @@
   background-color: var(--primary-color-golden);
 }
 
-.yellowLineFlex h5{
+.yellowLineFlex h5 {
   color: var(--primary-color-golden);
 }
 
-.aboutContent h1{
-  margin: 25px 0px; 
-}
-
-.aboutContent p{
+.aboutContent h1 {
   margin: 25px 0px;
 }
 
-
+.aboutContent p {
+  margin: 25px 0px;
+}
 
 @media all and (max-width: 1400px) {
   .innerAbout {
@@ -119,25 +117,75 @@
 
 @media all and (max-width: 1050px) {
   .innerAbout {
-    width: 1000px;
+    width: 900px;
     flex-direction: column;
     row-gap: 100px;
   }
   .imageSection {
-    width: 90%;
+    width: 100%;
     position: relative;
   }
-  
+
   .aboutContent {
-    width: 90%;
+    width: 100%;
     text-align: center;
   }
-  .yellowLineFlex{
+  .yellowLineFlex {
     justify-content: center;
   }
-  .yellowLineFlex div{
+  .yellowLineFlex div {
     display: none;
   }
 }
 
- 
+@media all and (max-width: 950px) {
+  .innerAbout {
+    width: 95vw;
+  }
+
+  .smallImage {
+    right: -10px;
+  }
+
+  .imageDetailsSection {
+    left: 220px;
+  }
+}
+
+@media all and (max-width: 550px) {
+  .bigImage {
+    height: 400px;
+  }
+
+  .smallImage {
+    height: 300px;
+  }
+
+  .imageDetailsSection {
+    left: 120px;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .bigImage {
+    height: 300px;
+  }
+
+  .smallImage {
+    height: 200px;
+  }
+
+  .imageDetailsSection {
+    left: 60px;
+  }
+}
+
+@media all and (max-width: 380px) {
+  .bigImage {
+    height: 270px;
+  }
+
+  .smallImage {
+    height: 170px;
+  }
+}
