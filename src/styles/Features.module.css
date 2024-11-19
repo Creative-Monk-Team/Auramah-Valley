@@ -1,5 +1,5 @@
 .FeaturesParent{ 
-    width: 100%;
+    /* width: 100%; */
     padding: 80px 0px;
 }
 
@@ -133,4 +133,50 @@
 
 .yellowLineFlex h5{
   color: var(--primary-color-golden);
+}
+
+@media all and (max-width: 1400px) {
+  .FeaturesChild {
+    width: 1240px;
+  }
+}
+
+@media all and (max-width: 1300px) {
+  .FeaturesChild {
+    width: 1190px;
+    flex-direction: column;
+    row-gap: 100px;
+  }
+  .FeaturesImage {
+    width: 90%;
+    position: relative;
+    justify-content: center;
+  }
+  
+  .FeaturesContent {
+    width: 90%;
+    text-align: center;
+  }
+  .yellowLineFlex{
+    justify-content: center;
+  }
+  .yellowLineFlex div{
+    display: none;
+  }
+}
+
+@media all and (max-width: 1240px) {
+  .FeaturesChild {
+    width: 1000px;
+  }
+}
+
+@media all and (max-width: 1050px) {
+  .FeaturesChild {
+    width: 1000px;
+    flex-direction: column;
+    row-gap: 100px;
+  }
+ 
+
 }

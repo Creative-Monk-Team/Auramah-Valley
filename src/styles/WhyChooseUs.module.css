@@ -144,3 +144,45 @@
     margin-top: 30px;
     margin-left: 20px;
   }
+  @media all and (max-width: 1400px) {
+    .WhyChooseUsChild {
+      width: 1240px;
+    }
+  }
+  
+  @media all and (max-width: 1300px) {
+    .WhyChooseUsChild {
+      width: 1190px;
+    }
+  }
+  
+  @media all and (max-width: 1240px) {
+    .WhyChooseUsChild {
+      width: 1000px;
+    }
+  }
+  
+  @media all and (max-width: 1050px) {
+    .WhyChooseUsChild {
+      width: 1000px;
+      flex-direction: column-reverse;
+      row-gap: 100px;
+    }
+    .WhyChooseUsImage {
+      width: 90%;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .WhyChooseUsContent {
+      width: 90%;
+      text-align: center;
+    }
+    .yellowLineFlex{
+      justify-content: center;
+    }
+    .yellowLineFlex div{
+      display: none;
+    }
+  }
