@@ -1,10 +1,42 @@
 import styles from "../styles/Explore.module.css";
+import { useState, useEffect, useRef } from "react";
 
 const Explore = () => {
+  let aboutRef = useRef(null);
+  let [isFirstView, setIsFirstView] = useState(false);
+
+  useEffect(() => {
+    let observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsFirstView(true);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    if (aboutRef.current) {
+      observer.observe(aboutRef.current);
+    }
+
+    return () => {
+      if (aboutRef.current) {
+        observer.unobserve(aboutRef.current);
+      }
+    };
+  }, []);
   return (
     <>
       <div className={styles.ExploreParent}>
-        <div className={styles.ExploreChild}>
+        <div
+          className={`${styles.ExploreChild} ${styles.animationSection} ${
+            isFirstView ? styles.showAnimationSection : ""
+          }`}
+          ref={aboutRef}
+        >
           <div className={styles.ExploreHeading}>
             <div className={styles.yellowLineFlex}>
               <div></div>
@@ -12,9 +44,17 @@ const Explore = () => {
               <div></div>
             </div>
             <h1>Lorem </h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad consequatur aspernatur vel officiis dignissimos placeat tempore! Laudantium, deserunt.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
+              consequatur aspernatur vel officiis dignissimos placeat tempore!
+              Laudantium, deserunt.
+            </p>
           </div>
-          <div className={styles.ExploreImageParent}>
+          <div
+            className={`${styles.ExploreImageParent} ${
+              styles.animationSection
+            } ${isFirstView ? styles.showAnimationSection : ""}`}
+          >
             <div className={styles.ExploreFirstImage}>
               <div className={styles.ExploreImageInnerContent}>
                 <h4>Lorem</h4>

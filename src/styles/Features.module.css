@@ -6,7 +6,19 @@
 .FeaturesContent {
   width: 48%;
   margin: auto;
+  position: relative;
+  top: 100px;
+  opacity: 0;
+  visibility: hidden;
 }
+
+.FeaturesContent.showAnimationSection {
+  transition-delay: 0.4s;
+  top: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
 .FeaturesContent h1 {
   margin: 20px 0px;
 }
@@ -17,6 +29,17 @@
   align-items: flex-end;
   justify-content: flex-start;
   gap: 10px;
+  position: relative;
+  top: 100px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.FeaturesImage.showAnimationSection {
+  transition-delay: 0.2s;
+  top: 0;
+  opacity: 1;
+  visibility: visible;
 }
 
 .FeaturesChild {
@@ -143,7 +166,7 @@
     flex-direction: column;
     row-gap: 50px;
   }
-  .FeaturesImage { 
+  .FeaturesImage {
     width: 90%;
     position: relative;
     justify-content: center;
@@ -190,7 +213,7 @@
   }
 }
 
-@media all and (max-width: 950px){
+@media all and (max-width: 950px) {
   .FeaturesChild {
     width: 95vw;
   }

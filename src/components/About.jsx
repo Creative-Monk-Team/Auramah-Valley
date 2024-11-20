@@ -1,14 +1,46 @@
 import styles from "../styles/About.module.css";
+import { useState, useEffect, useRef } from "react";
 import bg from "../assets/aboutBg.png";
 import bigImage from "../assets/banner2.jpg";
 import smallImage from "../assets/banner3.jpg";
 import Button from "./Button";
 
 let About = () => {
+  let aboutRef = useRef(null);
+  let [isFirstView, setIsFirstView] = useState(false);
+
+  useEffect(() => {
+    let observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsFirstView(true);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    if (aboutRef.current) {
+      observer.observe(aboutRef.current);
+    }
+
+    return () => {
+      if (aboutRef.current) {
+        observer.unobserve(aboutRef.current);
+      }
+    };
+  }, []);
   return (
     <div className={styles.about}>
       <div className={styles.innerAbout}>
-        <div className={styles.imageSection}>
+        <div
+          className={`${styles.imageSection} ${styles.animationSection} ${
+            isFirstView ? styles.showAnimationSection : ""
+          }`}
+          ref={aboutRef}
+        >
           <img alt="First Image" className={styles.bigImage} src={bigImage} />
           <img
             alt="Small Image"
@@ -16,7 +48,9 @@ let About = () => {
             src={smallImage}
           />
           <img alt="Bg Image" className={styles.bgImage} src={bg} />
-          <div className={styles.imageDetailsSection}>
+          <div
+            className={styles.imageDetailsSection}
+          >
             <h5>Lorem heading here</h5>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste
@@ -24,7 +58,9 @@ let About = () => {
             </p>
           </div>
         </div>
-        <div className={styles.aboutContent}>
+        <div className={`${styles.aboutContent} ${
+              styles.animationSection
+            } ${isFirstView ? styles.showAnimationSection : ""}`}>
           <div className={styles.yellowLineFlex}>
             <div></div>
             <h5>About Us</h5>

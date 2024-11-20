@@ -7,7 +7,19 @@
 .WhyChooseUsContent {
   width: 48%;
   margin: auto;
+  position: relative;
+  top: 100px;
+  opacity: 0;
+  visibility: hidden;
 }
+
+.WhyChooseUsContent.showAnimationSection {
+  transition-delay: 0.2s;
+  top: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
 .WhyChooseUsContent h1 {
   margin: 20px 0px;
 }
@@ -17,6 +29,17 @@
   align-items: flex-end;
   justify-content: flex-end;
   gap: 10px;
+  position: relative;
+  top: 100px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.WhyChooseUsImage.showAnimationSection {
+  transition-delay: 0.4s;
+  top: 0;
+  opacity: 1;
+  visibility: visible;
 }
 
 .WhyChooseUsChild {
