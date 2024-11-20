@@ -30,26 +30,57 @@
 
 import styles from "../styles/ContactForm.module.css";
 import WhyImage from "../assets/whychooseus.png";
+import { useState, useEffect, useRef } from "react";
 
 const ContactForm = () => {
+  let aboutRef = useRef(null);
+  let [isFirstView, setIsFirstView] = useState(false);
+
+  useEffect(() => {
+    let observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsFirstView(true);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    if (aboutRef.current) {
+      observer.observe(aboutRef.current);
+    }
+
+    return () => {
+      if (aboutRef.current) {
+        observer.unobserve(aboutRef.current);
+      }
+    };
+  }, []);
   return (
     <>
       <div className={styles.ContactFormParent}>
-        <div className={styles.ContactFormChild}>
-          {/* Form Content */}
-          <div className={styles.ContactFormContent}>
-          <div className={styles.yellowLineFlex}>
-            <h5>Querry</h5>
-            <div></div>
-          </div>
+        <div className={styles.ContactFormChild} ref={aboutRef}>
+          <div
+            className={`${styles.ContactFormContent} ${
+              styles.animationSection
+            } ${isFirstView ? styles.showAnimationSection : ""}`}
+          >
+            <div className={styles.yellowLineFlex}>
+              <h5>Querry</h5>
+              <div></div>
+            </div>
             <h1>Real Estate Inquiry Form</h1>
             <p className={styles.ContactFormContentPara}>
               As the complexity of buildings increases
             </p>
             <form className={styles.ContactForm}>
-              {/* Inquiry Type */}
               <div className={styles.formGroup}>
-                <label htmlFor="inquiryType"><h3>Inquiry Type</h3></label>
+                <label htmlFor="inquiryType">
+                  <h3>Inquiry Type</h3>
+                </label>
                 <select id="inquiryType" name="inquiryType">
                   <option value="">--Please choose an option--</option>
                   <option value="buy">Buy</option>
@@ -61,7 +92,9 @@ const ContactForm = () => {
               {/* How to Address and Your Name in Same Line */}
               <div className={styles.rowFlex}>
                 <div className={styles.formGroup}>
-                  <label htmlFor="address"><h3>How to Address</h3></label>
+                  <label htmlFor="address">
+                    <h3>How to Address</h3>
+                  </label>
                   <select id="address" name="address">
                     <option value="">--Please choose an option--</option>
                     <option value="mr">Mr.</option>
@@ -70,7 +103,9 @@ const ContactForm = () => {
                   </select>
                 </div>
                 <div className={styles.formGroup}>
-                  <label htmlFor="name"><h3>Your Name</h3></label>
+                  <label htmlFor="name">
+                    <h3>Your Name</h3>
+                  </label>
                   <input
                     type="text"
                     id="name"
@@ -82,7 +117,9 @@ const ContactForm = () => {
 
               {/* Email */}
               <div className={styles.formGroup}>
-                <label htmlFor="email"><h3>Email</h3></label>
+                <label htmlFor="email">
+                  <h3>Email</h3>
+                </label>
                 <input
                   type="email"
                   id="email"
@@ -93,7 +130,9 @@ const ContactForm = () => {
 
               {/* Personnel Role */}
               <div className={styles.formGroup}>
-                <label htmlFor="role"><h3>Personnel Role</h3></label>
+                <label htmlFor="role">
+                  <h3>Personnel Role</h3>
+                </label>
                 <select id="role" name="role">
                   <option value="">--Please choose an option--</option>
                   <option value="buyer">Buyer</option>
@@ -105,7 +144,9 @@ const ContactForm = () => {
               {/* Max Price and Min Size in Same Line */}
               <div className={styles.rowFlex}>
                 <div className={styles.formGroup}>
-                  <label htmlFor="maxPrice"><h3> Max Price</h3></label>
+                  <label htmlFor="maxPrice">
+                    <h3> Max Price</h3>
+                  </label>
                   <input
                     type="number"
                     id="maxPrice"
@@ -114,7 +155,9 @@ const ContactForm = () => {
                   />
                 </div>
                 <div className={styles.formGroup}>
-                  <label htmlFor="minSize"><h3>Min Size (sq ft)</h3></label>
+                  <label htmlFor="minSize">
+                    <h3>Min Size (sq ft)</h3>
+                  </label>
                   <input
                     type="number"
                     id="minSize"
@@ -132,7 +175,11 @@ const ContactForm = () => {
           </div>
 
           {/* Image Section */}
-          <div className={styles.ContactFormImage}>
+          <div
+            className={`${styles.ContactFormImage} ${styles.animationSection} ${
+              isFirstView ? styles.showAnimationSection : ""
+            }`}
+          >
             <img className={styles.img1} src={WhyImage} alt="Why Choose Us" />
           </div>
         </div>

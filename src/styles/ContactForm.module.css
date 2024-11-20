@@ -7,6 +7,17 @@
 .ContactFormContent {
   width: 48%;
   margin: auto;
+  position: relative;
+  top: 100px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.ContactFormContent.showAnimationSection {
+  transition-delay: 0.2s;
+  top: 0;
+  opacity: 1;
+  visibility: visible;
 }
 .ContactFormContent h1 {
   margin: 20px 0px;
@@ -17,6 +28,17 @@
   align-items: flex-end;
   justify-content: flex-end;
   gap: 10px;
+  position: relative;
+  top: 100px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.ContactFormImage.showAnimationSection {
+  transition-delay: 0.4s;
+  top: 0;
+  opacity: 1;
+  visibility: visible;
 }
 
 .ContactFormChild {
@@ -25,6 +47,7 @@
   display: flex;
   align-items: stretch;
 }
+
 .ContactFormListParent {
   display: flex;
   margin-top: 25px;
@@ -241,7 +264,6 @@ input::placeholder {
     width: 1000px;
   }
 }
-
 
 @media all and (max-width: 1050px) {
   .ContactFormChild {

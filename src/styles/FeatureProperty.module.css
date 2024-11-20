@@ -17,11 +17,33 @@
   .imageSection {
     width: 48%;
     position: relative;
+    position: relative;
+    top: 100px;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .imageSection.showAnimationSection {
+    transition-delay: 0.4s;
+    top: 0;
+    opacity: 1;
+    visibility: visible;
   }
   
   .FeaturePropertyContent {
     width: 48%;
     text-align: left;
+    position: relative;
+    top: 100px;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .FeaturePropertyContent.showAnimationSection {
+    transition-delay: 0.2s;
+    top: 0;
+    opacity: 1;
+    visibility: visible;
   }
   
   .bigImage {
@@ -103,7 +125,6 @@
     .innerFeatureProperty {
       width: 1240px;
     }
- 
   }
   
   @media all and (max-width: 1300px) {

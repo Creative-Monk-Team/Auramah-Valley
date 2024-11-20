@@ -68,7 +68,7 @@ option {
   font-family: "GtSectra", sans-serif;
 }
 
-@media all and (max-width: 1240px) {
+@media all and (max-width: 767px) {
   h1 {
     font-size: 30px;
   }
@@ -76,6 +76,6 @@ option {
     font-size: 20px;
   }
   p {
-    font-size: 12px;
+    font-size: 13px;
   }
 }

@@ -51,13 +51,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0px;
+  padding: 15px 0px;
   padding-bottom: 10px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.233);
 }
 
 .logo {
-  width: 150px;
+  width: 250px;
   height: auto;
 }
 
@@ -127,13 +127,18 @@
 .quickAccess {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   padding-bottom: 15px;
   border-bottom: 1px solid #000;
 }
 
+.quickAccess p {
+  font-size: 20px;
+}
+
 .smallOptionsDiv a {
   display: block;
-  color: var( --primary-color-golden);
+  color: var(--primary-color-golden);
   font-size: 18px;
   font-weight: 600;
   margin: 15px 0;
@@ -143,12 +148,64 @@
 .closeIcon {
   width: 20px;
   cursor: pointer;
+} 
+
+@media all and (max-width: 1500px) {
+  .innerNavbar {
+    width: 1400px;
+  }
+}
+
+@media all and (max-width: 1400px) {
+  .innerNavbar {
+    width: 1240px;
+  }
+}
+
+@media all and (max-width: 1300px) {
+  .innerNavbar {
+    width: 1190px;
+  }
+}
+
+@media all and (max-width: 1240px) {
+  .innerNavbar {
+    width: 1000px;
+  }
+
+  .optionsDiv {
+    width: 800px;
+  }
+
+  .optionsDiv a {
+    font-size: 15px;
+  }
+}
+
+@media all and (max-width: 1050px) {
+  .innerNavbar {
+    width: 900px;
+  }
+
+  .optionsDiv {
+    width: 700px;
+  }
+}
+
+@media all and (max-width: 950px) {
+  .innerNavbar {
+    width: 95%;
+  }
 }
 
 /* Media Queries for Responsiveness */
 @media (max-width: 900px) {
   .navbar {
-    display: none;  /* Hide regular navbar between 900px and 700px */
+    display: none;
+  }
+
+  .logo {
+    width: 200px;
   }
 
   .smallNavbar {
@@ -156,20 +213,35 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    background-color: var( --primary-color-black);
+    background-color: var(--primary-color-black);
     padding: 20px;
   }
 
   .hamburger {
-    width: 30px;
+    width: 25px;
   }
 
   .hamburgerParent {
     display: flex;
   }
+
+  .smallNavbar {
+    position: relative;
+    z-index: 3;
+    padding: 15px 5%;
+  }
+
+  .hamburgerContent {
+    width: 350px;
+    flex-shrink: 0;
+  }
+
+  .smallOptionsDiv a {
+    font-size: 16px;
+  }
 }
 
-@media (max-width: 700px) {
+/* @media (max-width: 700px) {
   .smallNavbar {
     padding: 18px 5%;
   }
@@ -181,4 +253,4 @@
   .smallOptionsDiv a {
     font-size: 16px;
   }
-}
+} */
